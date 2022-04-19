@@ -1,0 +1,150 @@
+{% extends 'index2.html' %}
+{% block content %}
+<div class="col-lg-12 mt-5">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="header-title">symmap3-herb-MM</h4>
+            <div class="single-table">
+                <div class="table-responsive">
+                    <table class="table text-center">
+                        <thead class="text-uppercase bg-primary">
+                            <tr>
+                                <th scope="col">ID</th>
+                                <th scope="col">Herb</th>
+                                <th scope="col">MM</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for obj in res1 %}
+                            <tr>
+                                <th scope="row">{{ obj.0 }}</th>
+                                <td scope="row">{{ obj.1 }}</td>
+                                <td scope="row">{{ obj.2 }}</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="col-lg-12 mt-5">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="header-title">symmap3-herb-Target</h4>
+            <div class="single-table">
+                <div class="table-responsive">
+                    <table class="table text-center">
+                        <thead class="text-uppercase bg-success">
+                            <tr>
+                                <th scope="col">ID</th>
+                                <th scope="col">Herb</th>
+                                <th scope="col">Gene</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for obj in res2 %}
+                            <tr>
+                                <th scope="row">{{ obj.0 }}</th>
+                                <td scope="row">{{ obj.1 }}</td>
+                                <td scope="row">{{ obj.2 }}</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><div class="col-lg-12 mt-5">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="header-title">Symmap3-Herb-Herb-Cosine-Jiaoji</h4>
+            <div class="single-table">
+                <div class="table-responsive">
+                    <table class="table text-center">
+                        <thead class="text-uppercase bg-info">
+                            <tr>
+                                <th scope="col">ID</th>
+                                <th scope="col">Herb1</th>
+                                <th scope="col">Herb2</th>
+                                <th scope="col">相关度</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for obj in res3 %}
+                            <tr>
+                                <th scope="row">{{ obj.0 }}</th>
+                                <td scope="row">{{ obj.2 }}</td>
+                                <td scope="row">{{ obj.3 }}</td>
+                                <td scope="row">{{ obj.1 }}</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><div class="col-lg-12 mt-5">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="header-title">基因-疾病</h4>
+            <div class="single-table">
+                <div class="table-responsive">
+                    <table class="table text-center">
+                        <thead class="text-uppercase bg-light">
+                            <tr>
+                                <th scope="col">ID</th>
+                                <th scope="col">基因</th>
+                                <th scope="col">疾病</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for obj in res4 %}
+                            <tr>
+                                <th scope="row">{{ obj.0 }}</th>
+                                <td scope="row">{{ obj.1 }}</td>
+                                <td scope="row">{{ obj.2 }}</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="col-lg-12 mt-5">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="header-title">基因-基因相关度</h4>
+            <div class="single-table">
+                <div class="table-responsive">
+                    <table class="table text-center">
+                        <thead class="text-uppercase bg-light">
+                            <tr>
+                                <th scope="col">ID</th>
+                                <th scope="col">Gene1</th>
+                                <th scope="col">Gene2</th>
+                                <th scope="col">相关度</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for obj in res5 %}
+                            <tr>
+                                <th scope="row">{{ obj.0 }}</th>
+                                <td scope="row">{{ obj.1 }}</td>
+                                <td scope="row">{{ obj.2 }}</td>
+                                <td scope="row">{{ obj.3 }}</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,74 @@
+{% extends 'index2.html' %}
+
+{% block content %}
+<div class="col-lg-12 mt-5">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="header-title">{{ res.0.0.Herb }}-{{ now }}</h4>
+            <div class="single-table">
+                <div class="table-responsive">
+                    <table class="table table-bordered text-center">
+                        <tbody>
+                            <tr>
+                                {% for obj in res.0 %}
+                                <td scope="row">{{ obj.Gene }}</td>
+                                {% endfor %}
+                            </tr>
+                            <tr>
+                                {% for obj in res.1 %}
+                                <td scope="row">{{ obj.Gene }}</td>
+                                {% endfor %}
+                            </tr>
+                            <tr>
+                                {% for obj in res.2 %}
+                                <td scope="row">{{ obj.Gene }}</td>
+                                {% endfor %}
+                            </tr>
+                            <tr>
+                                {% for obj in res.3 %}
+                                <td scope="row">{{ obj.Gene }}</td>
+                                {% endfor %}
+                            </tr>
+                            <tr>
+                                {% for obj in res.4 %}
+                                <td scope="row">{{ obj.Gene }}</td>
+                                {% endfor %}
+                            </tr>
+                            <tr>
+                                {% for obj in res.5 %}
+                                <td scope="row">{{ obj.Gene }}</td>
+                                {% endfor %}
+                            </tr>
+                            <tr>
+                                {% for obj in res.6 %}
+                                <td scope="row">{{ obj.Gene }}</td>
+                                {% endfor %}
+                            </tr>
+                            <tr>
+                                {% for obj in res.7 %}
+                                <td scope="row">{{ obj.Gene }}</td>
+                                {% endfor %}
+                            </tr>
+                            <tr>
+                                {% for obj in res.8 %}
+                                <td scope="row">{{ obj.Gene }}</td>
+                                {% endfor %}
+                            </tr>
+                            <tr>
+                                {% for obj in res.9 %}
+                                <td scope="row">{{ obj.Gene }}</td>
+                                {% endfor %}
+                            </tr>
+                            <tr>
+                                {% for obj in res.10 %}
+                                <td scope="row">{{ obj.Gene }}</td>
+                                {% endfor %}
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

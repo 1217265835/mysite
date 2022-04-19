@@ -1,0 +1,51 @@
+{% extends 'index2.html' %}
+{% block content %}
+    <div class="col-lg-12 mt-5">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="header-title">基因-基因相关度</h4>
+                                <div class="single-table">
+                                    <div class="table-responsive">
+                                        <table class="table text-center">
+                                            <thead class="text-uppercase bg-light">
+                                                <tr>
+                                                    <th scope="col">ID</th>
+                                                    <th scope="col">Gene1</th>
+                                                    <th scope="col">Gene2</th>
+                                                    <th scope="col">相关度</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                {% for obj in newres1 %}
+                                                <tr>
+                                                    <th scope="row">{{ obj.0 }}</th>
+                                                    <td scope="row">{{ obj.1 }}</td>
+                                                    <td scope="row">{{ obj.2 }}</td>
+                                                    <td scope="row">{{ obj.3 }}</td>
+                                                </tr>
+                                                {% endfor %}
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6">
+                                            <nav aria-label="...">
+                                                <ul class="pagination pg-color-border">
+                                                       {{ pagestring }}
+                                                </ul>
+                                            </nav>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6">
+                                            <form method="get">
+                                                <div class="input-group" style="width: 200px">
+                                                    <input type="text" name="page" class="form-control">
+                                                    <button type="submit" class="btn btn-primary">跳转</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+{% endblock %}
